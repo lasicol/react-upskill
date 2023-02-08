@@ -1,6 +1,7 @@
 import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
+import Button from "@mui/material/Button";
 
 import { useTranslation } from "react-i18next";
 
@@ -24,8 +25,12 @@ function App() {
         >
           {t("title")};
         </a>
-        <button onClick={() => changeLanguage("pl")}>PL</button>
-        <button onClick={() => changeLanguage("en")}>EN</button>
+        <Button variant="contained" onClick={() => changeLanguage("pl")}>
+          PL
+        </Button>
+        <Button variant="contained" onClick={() => changeLanguage("en")}>
+          EN
+        </Button>
       </header>
     </div>
   );
