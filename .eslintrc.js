@@ -10,14 +10,7 @@ module.exports = {
     "prettier",
     "react-app",
   ],
-  overrides: [
-    {
-      files: ["**/*.ts?(x)"],
-      rules: {
-        "additional-typescript-only-rule": "warn",
-      },
-    },
-  ],
+  overrides: [],
   parser: "@typescript-eslint/parser",
   parserOptions: {
     ecmaVersion: "latest",

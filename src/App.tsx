@@ -2,7 +2,13 @@ import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
 
+import { useTranslation } from "react-i18next";
+
 function App() {
+  const { t, i18n } = useTranslation();
+  const changeLanguage = (lng: "en" | "pl") => {
+    i18n.changeLanguage(lng);
+  };
   return (
     <div className="App">
       <header className="App-header">
@@ -16,8 +22,10 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          {t("title")};
         </a>
+        <button onClick={() => changeLanguage("pl")}>PL</button>
+        <button onClick={() => changeLanguage("en")}>EN</button>
       </header>
     </div>
   );
