@@ -4,6 +4,7 @@ import "./App.css";
 import Button from "@mui/material/Button";
 
 import { useTranslation } from "react-i18next";
+import ButtonAppBar from "./AppBar";
 
 function App() {
   const { t, i18n } = useTranslation();
@@ -12,6 +13,7 @@ function App() {
   };
   return (
     <div className="App">
+      <ButtonAppBar />
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
