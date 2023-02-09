@@ -22,11 +22,12 @@
   },
   "scripts": {
     "lint": "eslint src/**/*.ts src/**/*.tsx",
-    "start": "react-scripts start",
+    "start": "react-scripts start & yarn run json-server",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "json-server": "json-server --watch json-server/db.json --port 3001"
   },
   "eslintConfig": {
     "extends": [
@@ -54,6 +55,7 @@
     "eslint-plugin-react": "^7.32.2",
     "husky": "^8.0.3",
     "i18next": "^22.4.9",
+    "json-server": "^0.17.1",
     "lint-staged": "^13.1.1",
     "prettier": "2.8.4",
     "react-i18next": "^12.1.5"
