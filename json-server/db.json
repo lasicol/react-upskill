@@ -1,24 +1,80 @@
 {
-  "posts": [
+  "invoices": [
     {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
+      "no": "",
+      "currentDate": "2023-02-13",
+      "recipient": {
+        "companyName": "",
+        "city": "",
+        "street": "",
+        "postcode": "",
+        "nip": "",
+        "tel": "",
+        "email": "",
+        "bankAccount": ""
+      },
+      "sender": {
+        "companyName": "",
+        "city": "",
+        "street": "",
+        "postcode": "",
+        "nip": "",
+        "tel": "",
+        "email": "",
+        "bankAccount": ""
+      },
+      "invoiceItems": [
+        {
+          "name": "",
+          "amount": 1,
+          "unit": "",
+          "tax": 0,
+          "price": 0
+        }
+      ],
+      "id": 1
     },
     {
-      "id": 3,
-      "title": "json-server",
-      "author": "typicode"
-    },
-    {
-      "title": "json-server",
-      "author": "typicode",
-      "id": 4
-    },
-    {
-      "title": "json-server",
-      "author": "typicode",
-      "id": 5
+      "no": "dsdsadsadsa",
+      "currentDate": "2023-02-14",
+      "recipient": {
+        "companyName": "",
+        "city": "",
+        "street": "",
+        "postcode": "",
+        "nip": "",
+        "tel": "",
+        "email": "",
+        "bankAccount": ""
+      },
+      "sender": {
+        "companyName": "",
+        "city": "",
+        "street": "",
+        "postcode": "",
+        "nip": "",
+        "tel": "",
+        "email": "",
+        "bankAccount": ""
+      },
+      "invoiceItems": [
+        {
+          "name": "",
+          "amount": 1,
+          "unit": "",
+          "tax": 0,
+          "price": 223
+        },
+        {
+          "name": "",
+          "amount": 1,
+          "unit": "",
+          "tax": 0,
+          "price": 3
+        }
+      ],
+      "valid_until_date": "2023-03-09",
+      "id": 2
     }
   ],
   "comments": [

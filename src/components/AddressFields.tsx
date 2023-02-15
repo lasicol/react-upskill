@@ -1,73 +1,96 @@
 import * as React from "react";
 import { TextField } from "@mui/material";
+import { useFormikContext } from "formik";
+import { TFormikValues } from "../routes/createInvoice";
 
-export default function AddressFields() {
+type Props = {
+  containerType: "recipient" | "sender";
+};
+
+export default function AddressFields({ containerType }: Props) {
+  const { values, handleChange } = useFormikContext<TFormikValues>();
   return (
     <>
       {" "}
       <TextField
         variant="standard"
         fullWidth
-        id="company_name"
-        name="company_name"
+        id={`${containerType}_companyName`}
+        name={`${containerType}_companyName`}
         label="Company Name"
         type="text"
+        value={values[`${containerType}`].companyName}
+        onChange={handleChange}
       />
       <TextField
         variant="standard"
         fullWidth
-        id="city"
-        name="city"
+        id={`${containerType}_city`}
+        name={`${containerType}_city`}
         label="City"
         type="text"
+        value={values[`${containerType}`].city}
+        onChange={handleChange}
       />
       <TextField
         variant="standard"
         fullWidth
-        id="street"
-        name="street"
+        id={`${containerType}_street`}
+        name={`${containerType}_street`}
         label="Street"
         type="text"
+        value={values[`${containerType}`].street}
+        onChange={handleChange}
       />
       <TextField
         variant="standard"
         fullWidth
-        id="postcode"
-        name="postcode"
+        id={`${containerType}_postcode`}
+        name={`${containerType}_postcode`}
         label="Postcode"
         type="text"
+        value={values[`${containerType}`].postcode}
+        onChange={handleChange}
       />
       <TextField
         variant="standard"
         fullWidth
-        id="nip"
-        name="nip"
+        id={`${containerType}_nip`}
+        name={`${containerType}_nip`}
         label="NIP"
         type="text"
+        value={values[`${containerType}`].nip}
+        onChange={handleChange}
       />
       <TextField
         variant="standard"
         fullWidth
-        id="tel"
-        name="tel"
+        id={`${containerType}_tel`}
+        name={`${containerType}_tel`}
         label="Tel"
         type="text"
+        value={values[`${containerType}`].tel}
+        onChange={handleChange}
       />
       <TextField
         variant="standard"
         fullWidth
-        id="email"
-        name="email"
+        id={`${containerType}_email`}
+        name={`${containerType}_email`}
         label="E-mail"
-        type="email"
+        type="text"
+        value={values[`${containerType}`].email}
+        onChange={handleChange}
       />
       <TextField
         variant="standard"
         fullWidth
-        id="bank_account"
-        name="bank_account"
+        id={`${containerType}_bankAccount`}
+        name={`${containerType}_bankAccount`}
         label="Bank account"
         type="text"
+        value={values[`${containerType}`].bankAccount}
+        onChange={handleChange}
       />
     </>
   );

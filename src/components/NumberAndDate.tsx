@@ -1,7 +1,11 @@
 import React from "react";
 import { TextField, Grid } from "@mui/material";
+import { useFormikContext } from "formik";
+import { TFormikValues } from "../routes/createInvoice";
 
 export default function NumberAndDate() {
+  const { values, handleChange } = useFormikContext<TFormikValues>();
+
   return (
     <>
       <Grid item xs={5} container spacing={4} direction={"row"}>
@@ -14,8 +18,8 @@ export default function NumberAndDate() {
             name="no"
             label="No."
             type="text"
-            //   value={formik.values.password}
-            //   onChange={formik.handleChange}
+            value={values.no}
+            onChange={handleChange}
             //   error={formik.touched.password && Boolean(formik.errors.password)}
             //   helperText={formik.touched.password && formik.errors.password}
           />
@@ -32,8 +36,8 @@ export default function NumberAndDate() {
               label="Current Date"
               type="date"
               InputLabelProps={{ shrink: true }}
-              //   value={formik.values.password}
-              //   onChange={formik.handleChange}
+              defaultValue={values.currentDate}
+              onChange={handleChange}
               //   error={formik.touched.password && Boolean(formik.errors.password)}
               //   helperText={formik.touched.password && formik.errors.password}
             />
@@ -49,8 +53,8 @@ export default function NumberAndDate() {
               label="Valid Until Date"
               type="date"
               InputLabelProps={{ shrink: true }}
-              //   value={formik.values.password}
-              //   onChange={formik.handleChange}
+              defaultValue={values.validUntilDate}
+              onChange={handleChange}
               //   error={formik.touched.password && Boolean(formik.errors.password)}
               //   helperText={formik.touched.password && formik.errors.password}
             />

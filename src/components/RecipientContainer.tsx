@@ -11,7 +11,7 @@ export default function RecipientContainer() {
           <Typography variant="h4">Recipient</Typography>
         </Grid>
         <Grid item xs={12}>
-          <AddressFields />
+          <AddressFields containerType="recipient" />
         </Grid>
       </Grid>
     </>

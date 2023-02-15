@@ -8,6 +8,7 @@ import Root from "./routes/root";
 import ErrorPage from "./error-page";
 import Invoice from "./routes/invoice";
 import CreateInvoice from "./routes/createInvoice";
+import Invoices from "./routes/invoices";
 
 const router = createBrowserRouter([
   {
@@ -17,7 +18,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <Invoice />,
+        element: <Invoices />,
       },
       {
         path: "invoices/:id",
