@@ -1,74 +1,62 @@
-import * as React from "react";
 import { TextField } from "@mui/material";
 
 export default function AddressFields() {
+  const fields = [
+    {
+      name: "company_name",
+      label: "Company Name",
+      type: "text",
+    },
+    {
+      name: "city",
+      label: "City",
+      type: "text",
+    },
+    {
+      name: "street",
+      label: "Street",
+      type: "text",
+    },
+    {
+      name: "postcode",
+      label: "Postcode",
+      type: "text",
+    },
+    {
+      name: "nip",
+      label: "NIP",
+      type: "text",
+    },
+    {
+      name: "tel",
+      label: "Tel",
+      type: "text",
+    },
+    {
+      name: "email",
+      label: "E-Mail",
+      type: "text",
+    },
+    {
+      name: "bank_account",
+      label: "Bank Account",
+      type: "text",
+    },
+  ];
+
   return (
     <>
-      {" "}
-      <TextField
-        variant="standard"
-        fullWidth
-        id="company_name"
-        name="company_name"
-        label="Company Name"
-        type="text"
-      />
-      <TextField
-        variant="standard"
-        fullWidth
-        id="city"
-        name="city"
-        label="City"
-        type="text"
-      />
-      <TextField
-        variant="standard"
-        fullWidth
-        id="street"
-        name="street"
-        label="Street"
-        type="text"
-      />
-      <TextField
-        variant="standard"
-        fullWidth
-        id="postcode"
-        name="postcode"
-        label="Postcode"
-        type="text"
-      />
-      <TextField
-        variant="standard"
-        fullWidth
-        id="nip"
-        name="nip"
-        label="NIP"
-        type="text"
-      />
-      <TextField
-        variant="standard"
-        fullWidth
-        id="tel"
-        name="tel"
-        label="Tel"
-        type="text"
-      />
-      <TextField
-        variant="standard"
-        fullWidth
-        id="email"
-        name="email"
-        label="E-mail"
-        type="email"
-      />
-      <TextField
-        variant="standard"
-        fullWidth
-        id="bank_account"
-        name="bank_account"
-        label="Bank account"
-        type="text"
-      />
+      {fields.map((field) => (
+        <TextField
+          variant="standard"
+          fullWidth
+          id={field.name}
+          name={field.name}
+          label={field.label}
+          type={field.type}
+          key={field.name}
+        />
+      ))}
     </>
   );
 }

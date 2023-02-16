@@ -1,5 +1,3 @@
-import * as React from "react";
-
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import { Button } from "@mui/material";
@@ -13,12 +11,12 @@ import ActionButtons from "../components/ActionButtons";
 export default function CreateInvoice() {
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <Grid container spacing={2} style={{ marginTop: 20 }}>
+      <Grid container spacing={2} sx={{ marginTop: 2 }}>
         <NumberAndDate />
         <Grid item xs={3} />
         <ActionButtons />
         <Grid item xs={1} />
-        <Grid item xs={12} style={{ marginTop: 20, marginBottom: 20 }}>
+        <Grid item xs={12} sx={{ marginTop: 2, marginBottom: 2 }}>
           <Divider />
         </Grid>
         <Grid
@@ -26,7 +24,7 @@ export default function CreateInvoice() {
           xs={12}
           container
           direction={"row"}
-          style={{ marginTop: 20, marginBottom: 20 }}
+          sx={{ marginTop: 2, marginBottom: 2 }}
         >
           <RecipientContainer />
           <SenderContainer />

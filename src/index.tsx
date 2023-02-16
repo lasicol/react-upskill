@@ -3,33 +3,9 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import reportWebVitals from "./reportWebVitals";
 import "./translations";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Root from "./routes/root";
-import ErrorPage from "./error-page";
-import Invoice from "./routes/invoice";
-import CreateInvoice from "./routes/createInvoice";
+import { RouterProvider } from "react-router-dom";
 
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <Root />,
-    errorElement: <ErrorPage />,
-    children: [
-      {
-        path: "/",
-        element: <Invoice />,
-      },
-      {
-        path: "invoices/:id",
-        element: <Invoice />,
-      },
-      {
-        path: "invoices/create",
-        element: <CreateInvoice />,
-      },
-    ],
-  },
-]);
+import router from "./router";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement

@@ -9,6 +9,7 @@ module.exports = {
     "plugin:@typescript-eslint/recommended",
     "prettier",
     "react-app",
+    "plugin:react/jsx-runtime",
   ],
   overrides: [],
   parser: "@typescript-eslint/parser",
@@ -17,5 +18,8 @@ module.exports = {
     sourceType: "module",
   },
   plugins: ["react", "@typescript-eslint"],
-  rules: {},
+  rules: {
+    "react/react-in-jsx-scope": "off",
+    "react/jsx-uses-react": "off",
+  },
 };

@@ -1,4 +1,3 @@
-import React from "react";
 import { Button, Grid } from "@mui/material";
 
 export default function ActionButtons() {
@@ -9,7 +8,6 @@ export default function ActionButtons() {
           Save
         </Button>
         <Button variant="contained" style={{ margin: 3 }}>
-          {" "}
           Cancel
         </Button>
       </Grid>

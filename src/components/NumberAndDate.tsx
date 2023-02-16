@@ -1,4 +1,3 @@
-import React from "react";
 import { TextField, Grid } from "@mui/material";
 
 export default function NumberAndDate() {
@@ -14,10 +13,6 @@ export default function NumberAndDate() {
             name="no"
             label="No."
             type="text"
-            //   value={formik.values.password}
-            //   onChange={formik.handleChange}
-            //   error={formik.touched.password && Boolean(formik.errors.password)}
-            //   helperText={formik.touched.password && formik.errors.password}
           />
         </Grid>
         <Grid item xs={1} />
@@ -32,15 +27,10 @@ export default function NumberAndDate() {
               label="Current Date"
               type="date"
               InputLabelProps={{ shrink: true }}
-              //   value={formik.values.password}
-              //   onChange={formik.handleChange}
-              //   error={formik.touched.password && Boolean(formik.errors.password)}
-              //   helperText={formik.touched.password && formik.errors.password}
             />
           </Grid>
 
           <Grid item xs={6}>
-            {" "}
             <TextField
               variant="standard"
               fullWidth
@@ -49,10 +39,6 @@ export default function NumberAndDate() {
               label="Valid Until Date"
               type="date"
               InputLabelProps={{ shrink: true }}
-              //   value={formik.values.password}
-              //   onChange={formik.handleChange}
-              //   error={formik.touched.password && Boolean(formik.errors.password)}
-              //   helperText={formik.touched.password && formik.errors.password}
             />
           </Grid>
         </Grid>
