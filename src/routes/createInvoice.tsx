@@ -12,10 +12,16 @@ export default function CreateInvoice() {
   return (
     <Box sx={{ flexGrow: 1 }}>
       <Grid container spacing={2} sx={{ marginTop: 2 }}>
-        <NumberAndDate />
-        <Grid item xs={3} />
-        <ActionButtons />
-        <Grid item xs={1} />
+        <Grid
+          item
+          xs={12}
+          container
+          sx={{ flexWrap: "nowrap" }}
+          direction={"row"}
+        >
+          <NumberAndDate />
+          <ActionButtons />
+        </Grid>
         <Grid item xs={12} sx={{ marginTop: 2, marginBottom: 2 }}>
           <Divider />
         </Grid>
@@ -30,9 +36,10 @@ export default function CreateInvoice() {
           <SenderContainer />
         </Grid>
         <InvoiceItem />
-        <Grid item xs={10} />
-        <Grid item xs={2}>
-          <Button variant="contained">Add Item</Button>
+        <Grid container item xs={12} justifyContent={"flex-end"}>
+          <Grid item xs={2}>
+            <Button variant="contained">Add Item</Button>
+          </Grid>
         </Grid>
       </Grid>
     </Box>
