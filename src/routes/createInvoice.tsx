@@ -1,5 +1,3 @@
-import * as React from "react";
-
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import Divider from "@mui/material/Divider";
@@ -91,32 +89,30 @@ export default function CreateInvoice() {
         alert(JSON.stringify(values, null, 2));
       }}
     >
-      {(props: { values: TFormikValues }) => (
-        <Form>
-          <Box sx={{ flexGrow: 1 }}>
-            <Grid container spacing={2} style={{ marginTop: 20 }}>
-              <NumberAndDate />
-              <Grid item xs={3} />
-              <ActionButtons />
-              <Grid item xs={1} />
-              <Grid item xs={12} style={{ marginTop: 20, marginBottom: 20 }}>
-                <Divider />
-              </Grid>
-              <Grid
-                item
-                xs={12}
-                container
-                direction={"row"}
-                style={{ marginTop: 20, marginBottom: 20 }}
-              >
-                <RecipientContainer />
-                <SenderContainer />
-              </Grid>
-              <InvoiceItems />
+      <Form>
+        <Box sx={{ flexGrow: 1 }}>
+          <Grid container spacing={2} sx={{ marginTop: 2 }}>
+            <NumberAndDate />
+            <Grid item xs={3} />
+            <ActionButtons />
+            <Grid item xs={1} />
+            <Grid item xs={12} sx={{ marginTop: 2, marginBottom: 2 }}>
+              <Divider />
             </Grid>
-          </Box>
-        </Form>
-      )}
+            <Grid
+              item
+              xs={12}
+              container
+              direction={"row"}
+              sx={{ marginTop: 2, marginBottom: 2 }}
+            >
+              <RecipientContainer />
+              <SenderContainer />
+            </Grid>
+            <InvoiceItems />
+          </Grid>
+        </Box>
+      </Form>
     </Formik>
   );
 }

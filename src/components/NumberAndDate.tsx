@@ -1,4 +1,3 @@
-import React from "react";
 import { TextField, Grid } from "@mui/material";
 import { useFormikContext } from "formik";
 import { TFormikValues } from "../routes/createInvoice";
@@ -20,8 +19,6 @@ export default function NumberAndDate() {
             type="text"
             value={values.no}
             onChange={handleChange}
-            //   error={formik.touched.password && Boolean(formik.errors.password)}
-            //   helperText={formik.touched.password && formik.errors.password}
           />
         </Grid>
         <Grid item xs={1} />
@@ -38,13 +35,10 @@ export default function NumberAndDate() {
               InputLabelProps={{ shrink: true }}
               defaultValue={values.currentDate}
               onChange={handleChange}
-              //   error={formik.touched.password && Boolean(formik.errors.password)}
-              //   helperText={formik.touched.password && formik.errors.password}
             />
           </Grid>
 
           <Grid item xs={6}>
-            {" "}
             <TextField
               variant="standard"
               fullWidth
@@ -55,8 +49,6 @@ export default function NumberAndDate() {
               InputLabelProps={{ shrink: true }}
               defaultValue={values.validUntilDate}
               onChange={handleChange}
-              //   error={formik.touched.password && Boolean(formik.errors.password)}
-              //   helperText={formik.touched.password && formik.errors.password}
             />
           </Grid>
         </Grid>
