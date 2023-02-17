@@ -1,69 +1,66 @@
 import { TextField } from "@mui/material";
 import { useFormikContext } from "formik";
-import { TFormikValues } from "../routes/createInvoice";
-
+import { TFormikValues, TPersonalInfo } from "../routes/createInvoice";
+type TContainerType = "recipient" | "sender";
 type Props = {
-  containerType: "recipient" | "sender";
+  containerType: TContainerType;
 };
 
 export default function AddressFields({ containerType }: Props) {
   const { values, handleChange } = useFormikContext<TFormikValues>();
-  const fields = [
+  const fields: {
+    name: `${TContainerType}.${keyof TPersonalInfo}`;
+    label: string;
+    type: string;
+    value: string | number;
+  }[] = [
     {
-      name: `${containerType}_companyName`,
+      name: `${containerType}.companyName`,
       label: "Company Name",
       type: "text",
       value: values[`${containerType}`].companyName,
-      onChange: handleChange,
     },
     {
-      name: `${containerType}_city`,
+      name: `${containerType}.city`,
       label: "City",
       type: "text",
       value: values[`${containerType}`].city,
-      onChange: handleChange,
     },
     {
-      name: `${containerType}_street`,
+      name: `${containerType}.street`,
       label: "Street",
       type: "text",
       value: values[`${containerType}`].street,
-      onChange: handleChange,
     },
     {
-      name: `${containerType}_postcode`,
+      name: `${containerType}.postcode`,
       label: "Postcode",
       type: "text",
       value: values[`${containerType}`].postcode,
-      onChange: handleChange,
     },
     {
-      name: `${containerType}_nip`,
+      name: `${containerType}.nip`,
       label: "NIP",
       type: "text",
       value: values[`${containerType}`].nip,
-      onChange: handleChange,
     },
     {
-      name: `${containerType}_tel`,
+      name: `${containerType}.tel`,
       label: "Tel",
       type: "text",
       value: values[`${containerType}`].tel,
-      onChange: handleChange,
     },
     {
-      name: `${containerType}_email`,
+      name: `${containerType}.email`,
       label: "E-Mail",
       type: "text",
       value: values[`${containerType}`].email,
-      onChange: handleChange,
     },
     {
-      name: `${containerType}_bank_account`,
+      name: `${containerType}.bankAccount`,
       label: "Bank Account",
       type: "text",
       value: values[`${containerType}`].bankAccount,
-      onChange: handleChange,
     },
   ];
 
