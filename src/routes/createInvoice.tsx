@@ -76,13 +76,6 @@ export default function CreateInvoice() {
   return (
     <Formik
       initialValues={initialValues}
-      //   validate={(values) => {
-      //     const errors: { token?: any } = {};
-      //     if (values.no.length < 5) {
-      //       errors.token = "Invalid code. Too short.";
-      //     }
-      //     return errors;
-      //   }}
       onSubmit={(values) => {
         console.log(values);
         axios.post("http://localhost:3001/invoices", values);
@@ -91,34 +84,41 @@ export default function CreateInvoice() {
     >
       {(props: { values: TFormikValues }) => (
         <Form>
-          <Box sx={{ flexGrow: 1 }}>
-            <Grid container spacing={2} sx={{ marginTop: 2 }}>
-              <Grid
-                item
-                xs={12}
-                container
-                sx={{ flexWrap: "nowrap" }}
-                direction={"row"}
-              >
-                <NumberAndDate />
-                <ActionButtons />
-              </Grid>
-              <Grid item xs={12} sx={{ marginTop: 2, marginBottom: 2 }}>
-                <Divider />
-              </Grid>
-              <Grid
-                item
-                xs={12}
-                container
-                direction={"row"}
-                sx={{ marginTop: 2, marginBottom: 2 }}
-              >
-                <RecipientContainer />
-                <SenderContainer />
-              </Grid>
+          <Grid container spacing={2} mt={2} px={2}>
+            <Grid
+              item
+              container
+              direction={"row"}
+              justifyContent={"space-between"}
+              alignItems={"center"}
+            >
+              <NumberAndDate />
+              <ActionButtons />
+            </Grid>
+            <Grid item xs={12} sx={{ marginTop: 2, marginBottom: 2 }}>
+              <Divider />
+            </Grid>
+            <Grid
+              item
+              container
+              spacing={2}
+              sx={{
+                marginTop: 2,
+                marginBottom: 2,
+              }}
+            >
+              <RecipientContainer />
+              <SenderContainer />
+            </Grid>
+            <Grid
+              item
+              container
+              direction={"row"}
+              sx={{ marginTop: 2, marginBottom: 2 }}
+            >
               <InvoiceItems />
             </Grid>
-          </Box>
+          </Grid>
         </Form>
       )}
     </Formik>

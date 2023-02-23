@@ -4,11 +4,11 @@ import AddressFields from "./AddressFields";
 export default function RecipientContainer() {
   return (
     <>
-      <Grid item container xs={6} sx={{ pr: 2, pl: 2 }}>
-        <Grid item xs={12}>
+      <Grid item container xs={12} md={6}>
+        <Grid item>
           <Typography variant="h4">Recipient</Typography>
         </Grid>
-        <Grid item xs={12}>
+        <Grid item>
           <AddressFields containerType="recipient" />
         </Grid>
       </Grid>

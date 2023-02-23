@@ -11,8 +11,7 @@ export default function InvoiceItems() {
         <>
           {values.invoiceItems.map((item, index) => (
             <Grid spacing={1} container key={`invoiceItem[${index}]`}>
-              {" "}
-              <Grid item xs={6} style={{ paddingLeft: 30 }}>
+              <Grid item xs={6}>
                 <TextField
                   variant="standard"
                   fullWidth
@@ -26,12 +25,6 @@ export default function InvoiceItems() {
               </Grid>
               <Grid item xs={6}>
                 <TextField
-                  style={{
-                    width: "21.9%",
-                    display: "inline-block",
-                    margin: "0 1.1% 0 0",
-                    padding: 0,
-                  }}
                   variant="standard"
                   id={`invoiceItems[${index}].amount`}
                   name={`invoiceItems[${index}].amount`}
@@ -42,12 +35,6 @@ export default function InvoiceItems() {
                   InputLabelProps={{ shrink: true }}
                 />
                 <TextField
-                  style={{
-                    width: "21.9%",
-                    display: "inline-block",
-                    margin: "0 1.1% 0 0",
-                    padding: 0,
-                  }}
                   variant="standard"
                   id={`invoiceItems[${index}].unit`}
                   name={`invoiceItems[${index}].unit`}
@@ -57,12 +44,6 @@ export default function InvoiceItems() {
                   onChange={handleChange}
                 />
                 <TextField
-                  style={{
-                    width: "21.9%",
-                    display: "inline-block",
-                    margin: "0 1.1% 0 0",
-                    padding: 0,
-                  }}
                   variant="standard"
                   id={`invoiceItems[${index}].tax`}
                   name={`invoiceItems[${index}].tax`}
@@ -73,12 +54,6 @@ export default function InvoiceItems() {
                   InputLabelProps={{ shrink: true }}
                 />
                 <TextField
-                  style={{
-                    width: "21.9%",
-                    display: "inline-block",
-                    margin: "0 1.1% 0 0",
-                    padding: 0,
-                  }}
                   variant="standard"
                   id={`invoiceItems[${index}].price`}
                   name={`invoiceItems[${index}].price`}
@@ -92,16 +67,10 @@ export default function InvoiceItems() {
                   onClick={() => {
                     remove(index);
                   }}
-                  style={{
-                    width: "8%",
-                    display: "inline-block",
-                    margin: "0 0 0 0",
-                    padding: "20 0 12 0",
-                  }}
                 >
                   delete
                 </DeleteIcon>
-              </Grid>{" "}
+              </Grid>
             </Grid>
           ))}
           <Grid item xs={10} />
