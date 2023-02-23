@@ -3,25 +3,55 @@ import { useFormikContext } from "formik";
 
 export default function ActionButtons() {
   const { submitForm } = useFormikContext();
+
+  const onSubmit = async () => {
+    try {
+      await submitForm();
+    } catch (e) {
+      console.log(e);
+    }
+  };
   return (
     <>
-      <Grid container item>
-        <Grid item>
+      <Grid
+        item
+        container
+        xs={6}
+        md={4}
+        spacing={2}
+        justifyContent={{
+          xs: "flex-start",
+          md: "flex-end",
+        }}
+        direction={{
+          xs: "column",
+          md: "row",
+        }}
+      >
+        <Grid item md="auto">
           <Button
-            variant="contained"
-            onClick={async function () {
-              try {
-                await submitForm();
-              } catch (err) {
-                console.log(err);
-              }
+            sx={{
+              width: {
+                xs: "100%",
+              },
             }}
+            variant="contained"
+            onClick={onSubmit}
           >
             Save
           </Button>
         </Grid>
-        <Grid item>
-          <Button variant="contained">Cancel</Button>
+        <Grid item md="auto">
+          <Button
+            sx={{
+              width: {
+                xs: "100%",
+              },
+            }}
+            variant="contained"
+          >
+            Cancel
+          </Button>
         </Grid>
       </Grid>
     </>

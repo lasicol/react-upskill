@@ -7,8 +7,8 @@ export default function NumberAndDate() {
 
   return (
     <>
-      <Grid item xs={5} container spacing={4} direction={"row"} sx={{ ml: 4 }}>
-        <Grid item xs={12}>
+      <Grid item container direction="column" spacing={2} xs={6} ml={{ md: 2 }}>
+        <Grid item>
           <TextField
             variant="standard"
             fullWidth
@@ -20,8 +20,8 @@ export default function NumberAndDate() {
             onChange={handleChange}
           />
         </Grid>
-        <Grid item xs={12} container spacing={2}>
-          <Grid item xs={6}>
+        <Grid item container spacing={2} xs="auto" flexGrow={"grow"}>
+          <Grid item xs={12} md={6}>
             <TextField
               variant="standard"
               fullWidth
@@ -34,8 +34,7 @@ export default function NumberAndDate() {
               onChange={handleChange}
             />
           </Grid>
-
-          <Grid item xs={6}>
+          <Grid item xs={12} md={6}>
             <TextField
               variant="standard"
               fullWidth

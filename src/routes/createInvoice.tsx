@@ -1,4 +1,3 @@
-import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import Divider from "@mui/material/Divider";
 import SenderContainer from "../components/SenderContainer";
@@ -85,13 +84,7 @@ export default function CreateInvoice() {
       {(props: { values: TFormikValues }) => (
         <Form>
           <Grid container spacing={2} mt={2} px={2}>
-            <Grid
-              item
-              container
-              direction={"row"}
-              justifyContent={"space-between"}
-              alignItems={"center"}
-            >
+            <Grid item container justifyContent="space-between" spacing={2}>
               <NumberAndDate />
               <ActionButtons />
             </Grid>
