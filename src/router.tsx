@@ -1,8 +1,8 @@
 import { createBrowserRouter } from "react-router-dom";
-import Root from "./routes/root";
+import Root from "./routes/Root";
 import ErrorPage from "./error-page";
-import Invoice from "./routes/invoice";
-import CreateInvoice from "./routes/createInvoice";
+import Invoice from "./routes/Invoice";
+import CreateInvoice from "./routes/CreateInvoice";
 
 export default createBrowserRouter([
   {

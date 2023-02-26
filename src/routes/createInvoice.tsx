@@ -76,7 +76,6 @@ export default function CreateInvoice() {
     <Formik
       initialValues={initialValues}
       onSubmit={(values) => {
-        console.log(values);
         axios.post("http://localhost:3001/invoices", values);
         alert(JSON.stringify(values, null, 2));
       }}
@@ -103,12 +102,7 @@ export default function CreateInvoice() {
               <RecipientContainer />
               <SenderContainer />
             </Grid>
-            <Grid
-              item
-              container
-              direction={"row"}
-              sx={{ marginTop: 2, marginBottom: 2 }}
-            >
+            <Grid item container spacing={2}>
               <InvoiceItems />
             </Grid>
           </Grid>

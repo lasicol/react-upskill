@@ -1,6 +1,6 @@
 import { TextField, Grid } from "@mui/material";
 import { useFormikContext } from "formik";
-import { TFormikValues } from "../routes/createInvoice";
+import { TFormikValues } from "../routes/CreateInvoice";
 
 export default function NumberAndDate() {
   const { values, handleChange } = useFormikContext<TFormikValues>();

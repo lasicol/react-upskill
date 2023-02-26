@@ -1,6 +1,6 @@
 import { TextField } from "@mui/material";
 import { useFormikContext } from "formik";
-import { TFormikValues, TPersonalInfo } from "../routes/createInvoice";
+import { TFormikValues, TPersonalInfo } from "../routes/CreateInvoice";
 type TContainerType = "recipient" | "sender";
 type Props = {
   containerType: TContainerType;
